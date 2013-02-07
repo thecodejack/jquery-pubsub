@@ -24,7 +24,7 @@
 					for (i; i >= 0; i -= 1) {
 						var currentScope=publisherScope;
 						if(thisTopic[i][1] && thisTopic[i][1]!== null) {
-							currentScope= thisTopic[i][1] || currentScope;
+							currentScope= thisTopic[i][1]; // || currentScope;
 						}
 						thisTopic[i][0].apply( currentScope || this, args || []);
 					}
